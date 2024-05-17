@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AboutComponent } from '../about/about.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-login',
@@ -14,8 +16,14 @@ export class LoginComponent {
   signUpObj: SignUpModel  = new SignUpModel();
   loginObj: LoginModel  = new LoginModel();
 
-  constructor(private router: Router){}
-
+  constructor(
+    private router: Router,
+    private dialogRef : MatDialog
+  ){}
+  
+  openAboutModal(){
+    this.dialogRef.open(AboutComponent);
+  }
 
   onRegister() {
     debugger;
