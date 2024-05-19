@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AboutComponent } from '../about/about.component';
 import { MatDialog } from '@angular/material/dialog';
+import { PolicyComponent } from '../policy/policy.component';
+import { InfoComponent } from '../info/info.component';
 
 @Component({
   selector: 'app-login',
@@ -20,9 +22,17 @@ export class LoginComponent {
     private router: Router,
     private dialogRef : MatDialog
   ){}
-  
+
   openAboutModal(){
     this.dialogRef.open(AboutComponent);
+  }
+
+  openPolicyModal(){
+    this.dialogRef.open(PolicyComponent);
+  }
+
+  openInfoModal(){
+    this.dialogRef.open(InfoComponent);
   }
 
   onRegister() {

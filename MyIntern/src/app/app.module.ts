@@ -10,12 +10,16 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutComponent } from './Login/about/about.component';
+import { PolicyComponent } from './Login/policy/policy.component';
+import { InfoComponent } from './Login/info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    AboutComponent
+    AboutComponent,
+    PolicyComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
